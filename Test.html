@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вместе❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 30c0-10 5-15 10-20 5 5 10 10 10 20 0 10-10 15-10 25-5-10-10-15-10-25z' fill='%23ffb6c1' fill-opacity='0.2'/%3E%3C/svg%3E");
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #ff6b6b;
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.7);
+        }
+        .timeline {
+            background-color: rgba(255,255,255,0.7);
+            padding: 20px 40px 20px;
+            border-radius: 20px;
+            margin: 50px auto;
+            position: relative;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
+        }
+        .moment {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .moment.active {
+            display: flex;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 32px;
+            cursor: pointer;
+            z-index: 10;
+            background: rgba(255,107,107,0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .arrow:hover {
+            background: rgba(255,107,107,0.4);
+        }
+        .arrow.left {
+            left: 0;
+        }
+        .arrow.right {
+            right: 0;
+        }
+        .moment img {
+            width: 50%;
+            height: 50%;
+            border-radius: 15px;
+            margin: 0 0 5px 0;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            object-fit: cover;
+            object-position: center;
+        }
+        .moment > div {
+            width: 100%;
+            padding: 0 40px 10px;
+            margin-top: auto;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: -10px;
+        }
+    @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .heart-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(255, 107, 107, 0.8);
+            animation: float 3s ease-in-out infinite;
+        }
+    .photo-container {
+            width: 100%;
+            padding: 0 40px 10px;
+            margin-top: auto;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 title="Пока мини">Наша мини-история❤️</h1>
+            <p class="subtitle" style="color: rgba(231, 114, 114, 0.8);text-shadow: 0 0 6px rgba(255, 107, 107, 0.5);"><strong>Каждый момент с тобой – подарок</strong></p>
+        </header>
+        <div class="timeline">
+            <div class="arrow left">❮</div>
+            <div class="arrow right">❯</div>
+            <div class="moment active">
+                <div class="photo-container">
+                    <img src="C:\Users\LINK\Desktop\Phototg\photo1.jpg" alt="Наше знакомство">
+                </div>
+                <div class="moment-text">
+                    <h3 style="margin-bottom: 3px; font-size: 22px;" title="Пхпхпхп, да, Лео">Наше знакомство</h3>
+                    <p style="font-style: italic; margin-top: 2px; color: #666; font-size: 16px;">18 июля 2024</p>
+                </div>
+            </div>
+            <div class="moment">
+                <img src="C:\Users\LINK\Desktop\Phototg\photo2.jpg" alt="Первый поцелуй">
+                <div>
+                    <h3 style="margin-bottom: 3px; font-size: 22px;">Начало наших отношений</h3>
+                    <p style="font-style: italic; margin-top: 2px; color: #666; font-size: 16px;">23 декабря 2024</p>
+                </div>
+            </div>
+            <div class="moment">
+                <img src="C:\Users\LINK\Desktop\Phototg\photo33.jpg" alt="Наши первые полгода вместе">
+                <div>
+                    <h3 style="margin-bottom: 3px; font-size: 22px;">Наши первые полгода вместе</h3>
+                    <p style="font-style: italic; margin-top: 2px; color: #666; font-size: 16px;">23 июня 2025</p>
+                </div>
+            </div>
+            <div class="moment">
+                <img src="C:\Users\LINK\Desktop\Phototg\photo4.jpg" alt="Год с нашего знакомства" title="Love is.. у нас все получится!">
+                <div>
+                    <h3 style="margin-bottom: 3px; font-size: 22px;">Год с нашего знакомства</h3>
+                    <p style="font-style: italic; margin-top: 2px; color: #666; font-size: 16px;">18 июля 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const moments = document.querySelectorAll('.moment');
+        const leftArrow = document.querySelector('.arrow.left');
+        const rightArrow = document.querySelector('.arrow.right');
+        let currentIndex = 0;
+
+        function showMoment(index) {
+            moments.forEach((moment, i) => {
+                moment.classList.toggle('active', i === index);
+            });
+        }
+
+        leftArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + moments.length) % moments.length;
+            showMoment(currentIndex);
+        });
+
+        rightArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % moments.length;
+            showMoment(currentIndex);
+        });
+
+        showMoment(0); // Show first moment initially
+    </script>
+    <div class="heart-bg" id="heartBg"></div>
+    <script>
+        // Create floating hearts
+        function createHearts() {
+            const heartBg = document.getElementById('heartBg');
+            const heartCount = 40;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = Math.random() * 100 + 'vh';
+                heart.style.animationDelay = Math.random() * 3 + 's';
+                heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                heartBg.appendChild(heart);
+            }
+        }
+        
+        createHearts();
+    </script>
+</body>
+</html>
