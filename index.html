@@ -96,6 +96,17 @@
             font-family: 'Playfair Display', serif;
             margin-bottom: -10px;
         }
+    .days-together {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            color: #ff6b6b;
+        }
     @keyframes float {
             0% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -165,6 +176,7 @@
                 </div>
             </div>
         </div>
+        <div class="days-together" id="daysTogether"></div>
     </div>
     <script>
         const moments = document.querySelectorAll('.moment');
@@ -189,6 +201,13 @@
         });
 
         showMoment(0); // Show first moment initially
+        // Calculate the number of days together
+        const startDate = new Date('2024-12-23');
+        const today = new Date();
+        const timeDiff = today - startDate;
+        const daysTogether = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        // Display the number of days together
+        document.getElementById('daysTogether').innerText = `Мы вместе ${daysTogether} дней`;
     </script>
     <div class="heart-bg" id="heartBg"></div>
     <script>
